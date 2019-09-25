@@ -1,0 +1,38 @@
+"a" = (/turf/space,/area)
+"b" = (/turf/floor,/area)
+"c" = (/turf/wall/shuttle,/area)
+"d" = (/turf/wall,/area)
+"e" = (/turf/wall/reinforced,/area)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaabbbbbbbbbbbbbaacaaaaaaaaaaa
+aaabbbbbbbbbbbbbaacaaaacaaaaaa
+aaabbbbbbbbbbbbbaaccaaacaaaaaa
+aaabbbbbbbbccccbaaaaaaacaaaaaa
+aaabbbbbbbbbbbcbaaaaaaacaaaaaa
+aaabbdbbbbcccbcbaaaaacaaaaaaaa
+aaabbdbbbbcccccbaaaaacaaaaaaaa
+aadddddbbbcccbbbaaacaaaaaaaaaa
+aaabbdbbbbcbbbbbaaaaaaaaaaaaaa
+aaabbeeeeeeeeeebaaaaaaeaaaaaaa
+aaabbbbbbbbbbbbbaaaaeeeaaaaaaa
+aaabbbbbbbbbbbbbaaeeeeeaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+"}
