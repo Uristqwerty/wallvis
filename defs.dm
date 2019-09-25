@@ -70,7 +70,7 @@
 /tech/wall_over/outer
 	plane = PLANE_WALLSMOOTH_OUTER
 	blend_mode = BLEND_ADD
-	color = list(2,0,0,0, 0,2,0,0, 0,0,2,0, 0,0,0,over_zero, 0,0,0,0)
+	alpha = 127
 
 /tech/wall_over/inner
 
@@ -96,7 +96,7 @@ var/const/over_mul = 1/(over_one-over_zero)
 var/const/over_sub = over_mul*over_one - 1
 var/const/cc = over_one / over_zero
 
-/tech/plane_master/two_mask
+/tech/plane_master/edges
 	color = list(cc,0,0,0, 0,cc,0,0, 0,0,cc,0, 0,0,0,over_mul, 0,0,0,-over_sub)
 
 
@@ -104,6 +104,10 @@ var/const/over_zero3 = 1 - over_zero*over_zero
 var/const/over_one3 = 1 - over_zero*over_zero*over_zero
 var/const/over_mul3 = 1/(over_one3-over_zero3)
 var/const/over_sub3 = over_mul3*over_one3 - 1
+var/const/cc3 = 1.8
 
-/tech/plane_master/three_mask
+/tech/plane_master/inner_corners
 	color = list(1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,over_mul3, 0,0,0,-over_sub3)
+
+/tech/plane_master/outer_corners
+	color = list(cc3,0,0,0, 0,cc3,0,0, 0,0,cc3,0, 0,0,0,over_mul3, 0,0,0,-over_sub3)

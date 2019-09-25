@@ -83,14 +83,14 @@
 
 /mob/Login()
 	. = ..()
-	client.screen += new/tech/plane_master/three_mask {plane = PLANE_WALLSMOOTH_OUTER}
+	client.screen += new/tech/plane_master/outer_corners {plane = PLANE_WALLSMOOTH_OUTER}
 
-	client.screen += new/tech/plane_master/two_mask {plane = PLANE_WALLSMOOTH_N}
-	client.screen += new/tech/plane_master/two_mask {plane = PLANE_WALLSMOOTH_S}
-	client.screen += new/tech/plane_master/two_mask {plane = PLANE_WALLSMOOTH_E}
-	client.screen += new/tech/plane_master/two_mask {plane = PLANE_WALLSMOOTH_W}
+	client.screen += new/tech/plane_master/edges {plane = PLANE_WALLSMOOTH_N}
+	client.screen += new/tech/plane_master/edges {plane = PLANE_WALLSMOOTH_S}
+	client.screen += new/tech/plane_master/edges {plane = PLANE_WALLSMOOTH_E}
+	client.screen += new/tech/plane_master/edges {plane = PLANE_WALLSMOOTH_W}
 
-	client.screen += new/tech/plane_master/three_mask {plane = PLANE_WALLSMOOTH_INNER_NE}
-	client.screen += new/tech/plane_master/three_mask {plane = PLANE_WALLSMOOTH_INNER_NW}
-	client.screen += new/tech/plane_master/three_mask {plane = PLANE_WALLSMOOTH_INNER_SE}
-	client.screen += new/tech/plane_master/three_mask {plane = PLANE_WALLSMOOTH_INNER_SW}
+	client.screen += new/tech/plane_master/inner_corners {plane = PLANE_WALLSMOOTH_INNER_NE}
+	client.screen += new/tech/plane_master/inner_corners {plane = PLANE_WALLSMOOTH_INNER_NW}
+	client.screen += new/tech/plane_master/inner_corners {plane = PLANE_WALLSMOOTH_INNER_SE}
+	client.screen += new/tech/plane_master/inner_corners {plane = PLANE_WALLSMOOTH_INNER_SW}
