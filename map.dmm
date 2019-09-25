@@ -3,6 +3,7 @@
 "c" = (/turf/wall/shuttle,/area)
 "d" = (/turf/wall,/area)
 "e" = (/turf/wall/reinforced,/area)
+"f" = (/turf/wall/debug,/area)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -19,13 +20,13 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaabbbbbbbbbbbbbaacaaaaaaaaaaa
-aaabbbbbbbbbbbbbaacaaaacaaaaaa
-aaabbbbbbbbbbbbbaaccaaacaaaaaa
-aaabbbbbbbbccccbaaaaaaacaaaaaa
-aaabbbbbbbbbbbcbaaaaaaacaaaaaa
+affffffffaaaaaaaaaaaaaaaaaaaaa
+afaaaaaffaaaaaaaaaaaaaaaaaaaaa
+afabfbbffbbbbbbbaacaaaaaaaaaaa
+afabfffffbbbbbbbaacaaaacaaaaaa
+afabbbbffbbbbbbbaaccaaacaaaaaa
+afabbbbbbbbccccbaaaaaaacaaaaaa
+afabbbbbbbbbbbcbaaaaaaacaaaaaa
 aaabbdbbbbcccbcbaaaaacaaaaaaaa
 aaabbdbbbbcccccbaaaaacaaaaaaaa
 aadddddbbbcccbbbaaacaaaaaaaaaa

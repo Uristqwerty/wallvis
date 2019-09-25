@@ -42,6 +42,10 @@
 	wall_smoothing_id = "shuttle"
 	icon_state = "shuttle"
 
+/turf/wall/debug
+	wall_smoothing_id = "debug"
+	icon_state = "debug"
+
 
 /tech
 	parent_type = /obj

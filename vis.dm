@@ -51,20 +51,21 @@
 	t.overlays += new/tech/mask{icon_state = "edge-e"; plane = PLANE_WALLSMOOTH_E; color = rgb(0,0,0)}
 	t.overlays += new/tech/mask{icon_state = "edge-w"; plane = PLANE_WALLSMOOTH_W; color = rgb(0,0,0)}
 
-	t.overlays += new/tech/mask{icon_state = "corner-ne"; plane = PLANE_WALLSMOOTH_INNER_NE}
-	t.overlays += new/tech/mask{icon_state = "corner-nw"; plane = PLANE_WALLSMOOTH_INNER_NW}
-	t.overlays += new/tech/mask{icon_state = "corner-se"; plane = PLANE_WALLSMOOTH_INNER_SE}
-	t.overlays += new/tech/mask{icon_state = "corner-sw"; plane = PLANE_WALLSMOOTH_INNER_SW}
+	t.overlays += new/tech/mask{icon_state = "corner-ne"; plane = PLANE_WALLSMOOTH_INNER_NE; color = rgb(0,0,0)}
+	t.overlays += new/tech/mask{icon_state = "corner-nw"; plane = PLANE_WALLSMOOTH_INNER_NW; color = rgb(0,0,0)}
+	t.overlays += new/tech/mask{icon_state = "corner-se"; plane = PLANE_WALLSMOOTH_INNER_SE; color = rgb(0,0,0)}
+	t.overlays += new/tech/mask{icon_state = "corner-sw"; plane = PLANE_WALLSMOOTH_INNER_SW; color = rgb(0,0,0)}
 
 	return t
 
 /proc/init_wall_overlay(id)
 	var/tech/t = new()
 
-	t.overlays += new/tech/mask{icon_state = "edges-se"; plane = PLANE_WALLSMOOTH_INNER_SE}
-	t.overlays += new/tech/mask{icon_state = "edges-sw"; plane = PLANE_WALLSMOOTH_INNER_SW}
-	t.overlays += new/tech/mask{icon_state = "edges-ne"; plane = PLANE_WALLSMOOTH_INNER_NE}
-	t.overlays += new/tech/mask{icon_state = "edges-nw"; plane = PLANE_WALLSMOOTH_INNER_NW}
+#define edges_color rgb(230,230,230)
+	t.overlays += new/tech/mask{icon_state = "edges-se"; plane = PLANE_WALLSMOOTH_INNER_SE; color = edges_color}
+	t.overlays += new/tech/mask{icon_state = "edges-sw"; plane = PLANE_WALLSMOOTH_INNER_SW; color = edges_color}
+	t.overlays += new/tech/mask{icon_state = "edges-ne"; plane = PLANE_WALLSMOOTH_INNER_NE; color = edges_color}
+	t.overlays += new/tech/mask{icon_state = "edges-nw"; plane = PLANE_WALLSMOOTH_INNER_NW; color = edges_color}
 
 	t.overlays += new/tech/wall_over/inner(id, 32, PLANE_WALLSMOOTH_INNER_NE)
 	t.overlays += new/tech/wall_over/inner(id, 32, PLANE_WALLSMOOTH_INNER_NW)
