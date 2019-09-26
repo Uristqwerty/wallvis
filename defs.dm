@@ -8,7 +8,10 @@
 #define PLANE_WALLSMOOTH_E 46
 #define PLANE_WALLSMOOTH_W 47
 
-#define PLANE_WALLSMOOTH_OUTER 48
+#define PLANE_WALLSMOOTH_HORIZ_HARD 48
+#define PLANE_WALLSMOOTH_VERT_HARD 49
+
+#define PLANE_WALLSMOOTH_OUTER 50
 
 /world
 	turf = /turf/space
@@ -61,6 +64,13 @@
 	blend_mode = BLEND_ADD
 	layer = MASK_LAYER
 
+/tech/mask2
+	icon = 'wall-masks2.dmi'
+	pixel_x = -32
+	pixel_y = -32
+	alpha = 127
+	blend_mode = BLEND_ADD
+	layer = MASK_LAYER
 
 /tech/wall_over
 	icon = 'walls.dmi'
@@ -79,6 +89,14 @@
 	alpha = 127
 
 /tech/wall_over/horiz
+	blend_mode = BLEND_ADD
+	alpha = 127
+
+/tech/wall_over/horiz_hard
+	blend_mode = BLEND_ADD
+	alpha = 127
+
+/tech/wall_over/vert_hard
 	blend_mode = BLEND_ADD
 	alpha = 127
 
@@ -110,4 +128,7 @@ var/const/cc3 = 1.8
 	color = list(1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,over_mul3, 0,0,0,-over_sub3)
 
 /tech/plane_master/outer_corners
+	color = list(cc3,0,0,0, 0,cc3,0,0, 0,0,cc3,0, 0,0,0,over_mul3, 0,0,0,-over_sub3)
+
+/tech/plane_master/edges_hard
 	color = list(cc3,0,0,0, 0,cc3,0,0, 0,0,cc3,0, 0,0,0,over_mul3, 0,0,0,-over_sub3)

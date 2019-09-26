@@ -44,6 +44,14 @@
 	src.icon -= I
 	src.plane = plane
 
+/tech/wall_over/vert_hard/New(id, plane)
+	src.icon_state = "[id]-vert"
+	src.plane = plane
+
+/tech/wall_over/horiz_hard/New(id, plane)
+	src.icon_state = "[id]-horiz"
+	src.plane = plane
+
 
 /proc/init_floor_overlay()
 	var/tech/t = new()
@@ -64,6 +72,9 @@
 	t.overlays += new/tech/mask{icon_state = "corner-nw"; plane = PLANE_WALLSMOOTH_INNER_NW; color = rgb(0,0,0)}
 	t.overlays += new/tech/mask{icon_state = "corner-se"; plane = PLANE_WALLSMOOTH_INNER_SE; color = rgb(0,0,0)}
 	t.overlays += new/tech/mask{icon_state = "corner-sw"; plane = PLANE_WALLSMOOTH_INNER_SW; color = rgb(0,0,0)}
+
+	t.overlays += new/tech/mask2{icon_state = "horiz-hard"; plane = PLANE_WALLSMOOTH_HORIZ_HARD; color = rgb(0,0,0)}
+	t.overlays += new/tech/mask2{icon_state = "vert-hard"; plane = PLANE_WALLSMOOTH_VERT_HARD; color = rgb(0,0,0)}
 
 	return t
 
@@ -93,6 +104,9 @@
 	t.overlays += new/tech/wall_over/vert(id, "e", PLANE_WALLSMOOTH_E)
 	t.overlays += new/tech/wall_over/vert(id, "w", PLANE_WALLSMOOTH_W)
 
+	t.overlays += new/tech/wall_over/horiz_hard(id, PLANE_WALLSMOOTH_HORIZ_HARD)
+	t.overlays += new/tech/wall_over/vert_hard(id, PLANE_WALLSMOOTH_VERT_HARD)
+
 	return t
 
 /mob/Login()
@@ -103,6 +117,9 @@
 	client.screen += new/tech/plane_master/edges {plane = PLANE_WALLSMOOTH_S}
 	client.screen += new/tech/plane_master/edges {plane = PLANE_WALLSMOOTH_E}
 	client.screen += new/tech/plane_master/edges {plane = PLANE_WALLSMOOTH_W}
+
+	client.screen += new/tech/plane_master/edges_hard {plane = PLANE_WALLSMOOTH_HORIZ_HARD}
+	client.screen += new/tech/plane_master/edges_hard {plane = PLANE_WALLSMOOTH_VERT_HARD}
 
 	client.screen += new/tech/plane_master/inner_corners {plane = PLANE_WALLSMOOTH_INNER_NE}
 	client.screen += new/tech/plane_master/inner_corners {plane = PLANE_WALLSMOOTH_INNER_NW}
