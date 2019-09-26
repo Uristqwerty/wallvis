@@ -27,12 +27,21 @@
 	src.icon_state = "[id]-inner"
 	src.plane = plane
 
-/tech/wall_over/vert/New(id, plane)
+/tech/wall_over/vert/New(id, dir, plane)
 	src.icon_state = "[id]-vert"
+	// TODO: Probably doesn't have to be explicit icon procs, but MVP first; polish later
+	var/const/f = 0.09
+	var/icon/I = icon('walls.dmi', "edge-fade-[dir]")
+	I.MapColors(0,0,0,0, 0,0,0,0, 0,0,0,0, -f,-f,-f,0, f,f,f,1)
+	src.icon -= I
 	src.plane = plane
 
-/tech/wall_over/horiz/New(id, plane)
+/tech/wall_over/horiz/New(id, dir, plane)
 	src.icon_state = "[id]-horiz"
+	var/const/f = 0.08
+	var/icon/I = icon('walls.dmi', "edge-fade-[dir]")
+	I.MapColors(0,0,0,0, 0,0,0,0, 0,0,0,0, -f,-f,-f,0, f,f,f,1)
+	src.icon -= I
 	src.plane = plane
 
 
@@ -46,10 +55,10 @@
 		alpha = 127
 	}
 
-	t.overlays += new/tech/mask{icon_state = "edge-n"; plane = PLANE_WALLSMOOTH_N; color = rgb(0,0,0)}
-	t.overlays += new/tech/mask{icon_state = "edge-s"; plane = PLANE_WALLSMOOTH_S; color = rgb(0,0,0)}
-	t.overlays += new/tech/mask{icon_state = "edge-e"; plane = PLANE_WALLSMOOTH_E; color = rgb(0,0,0)}
-	t.overlays += new/tech/mask{icon_state = "edge-w"; plane = PLANE_WALLSMOOTH_W; color = rgb(0,0,0)}
+	t.overlays += new/tech/mask{icon_state = "edge-n-fade"; plane = PLANE_WALLSMOOTH_N; color = rgb(0,0,0)}
+	t.overlays += new/tech/mask{icon_state = "edge-s-fade"; plane = PLANE_WALLSMOOTH_S; color = rgb(0,0,0)}
+	t.overlays += new/tech/mask{icon_state = "edge-e-fade"; plane = PLANE_WALLSMOOTH_E; color = rgb(0,0,0)}
+	t.overlays += new/tech/mask{icon_state = "edge-w-fade"; plane = PLANE_WALLSMOOTH_W; color = rgb(0,0,0)}
 
 	t.overlays += new/tech/mask{icon_state = "corner-ne"; plane = PLANE_WALLSMOOTH_INNER_NE; color = rgb(0,0,0)}
 	t.overlays += new/tech/mask{icon_state = "corner-nw"; plane = PLANE_WALLSMOOTH_INNER_NW; color = rgb(0,0,0)}
@@ -73,11 +82,16 @@
 	t.overlays += new/tech/wall_over/inner(id, -32, PLANE_WALLSMOOTH_INNER_SW)
 
 	t.overlays += new/tech/wall_over/outer(id)
-
-	t.overlays += new/tech/wall_over/vert(id, PLANE_WALLSMOOTH_E)
-	t.overlays += new/tech/wall_over/vert(id, PLANE_WALLSMOOTH_W)
-	t.overlays += new/tech/wall_over/horiz(id, PLANE_WALLSMOOTH_N)
-	t.overlays += new/tech/wall_over/horiz(id, PLANE_WALLSMOOTH_S)
+/*
+	t.overlays += new/tech/mask{icon_state = "center"; plane = PLANE_WALLSMOOTH_N; color = rgb(0,0,0)}
+	t.overlays += new/tech/mask{icon_state = "center"; plane = PLANE_WALLSMOOTH_S; color = rgb(0,0,0)}
+	t.overlays += new/tech/mask{icon_state = "center"; plane = PLANE_WALLSMOOTH_E; color = rgb(0,0,0)}
+	t.overlays += new/tech/mask{icon_state = "center"; plane = PLANE_WALLSMOOTH_W; color = rgb(0,0,0)}
+*/
+	t.overlays += new/tech/wall_over/horiz(id, "n", PLANE_WALLSMOOTH_N)
+	t.overlays += new/tech/wall_over/horiz(id, "s", PLANE_WALLSMOOTH_S)
+	t.overlays += new/tech/wall_over/vert(id, "e", PLANE_WALLSMOOTH_E)
+	t.overlays += new/tech/wall_over/vert(id, "w", PLANE_WALLSMOOTH_W)
 
 	return t
 

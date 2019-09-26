@@ -75,12 +75,12 @@
 /tech/wall_over/inner
 
 /tech/wall_over/vert
-	alpha = 127
 	blend_mode = BLEND_ADD
+	alpha = 127
 
 /tech/wall_over/horiz
-	alpha = 127
 	blend_mode = BLEND_ADD
+	alpha = 127
 
 
 /tech/plane_master
